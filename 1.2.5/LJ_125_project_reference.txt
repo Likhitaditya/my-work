@@ -1,0 +1,28 @@
+Overall funcitionality:
+    - the The program is a simple implementation of the Snake game using Python's Turtle module.
+    -The snake moves around the screen, eating food to grow longer. The user controls the snake's direction using the WASD keys.
+    -When the snake eats food, it grows longer, and the score increases. The game ends if the snake collides with the screen borders or itself.
+    -The high score is displayed along with the current score.
+
+Code segment related to user input:
+    - The WASD keys represnt the arrow keys, these keys help the snake move in the users desired direction.
+    -This is the code that was used for the snake to move manipulated by the user:
+        # Keyboard bindings
+        wn.listen()
+        wn.onkeypress(go_up, "w")
+        wn.onkeypress(go_down, "s")
+        wn.onkeypress(go_left, "a")
+        wn.onkeypress(go_right, "d")
+    -This code segment sets up the keyboard bindings to control the snake's movement.
+    -When the user presses the "W" key, the snake moves up. Similarly, "S" for down, "A" for left, and "D" for right.
+    -The user input represents the direction in which the snake should move.
+
+Code segment related to a Function:
+    -This was the code that used a Function:
+        def move():
+            if head.direction == "up":
+                y = head.ycor()
+                head.sety(y + 20)
+    -This function (move) handles the movement of the snake based on its current direction.
+    -It helps reduce duplication of code by focusing the logic for moving the snake in different directions.
+    -Instead of repeating the movement logic every time the snake needs to move, we call this function, which improves the code's readability.
